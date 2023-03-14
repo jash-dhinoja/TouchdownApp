@@ -34,6 +34,17 @@ struct ContentView: View {
                             FeaturedView()
                             .padding(.vertical,20)
                             .frame(height: UIScreen.main.bounds.width / 1.475)
+                        CategoryGridView()
+                        
+                        TitleView(title: "Helmet")
+                        
+                        LazyVGrid(columns: gridLayout,spacing: 15){
+                            ForEach(products){ product in
+                                ProductItem(product: product)
+                            }
+                        }
+                        .padding(15)
+                        
                         FooterView()
                             .padding(.horizontal)
                     }
