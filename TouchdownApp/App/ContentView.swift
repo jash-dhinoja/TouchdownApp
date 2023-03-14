@@ -10,15 +10,6 @@ import SwiftUI
 struct ContentView: View {
 //MARK: Properties
     
-    func getWindowTopSafeAreaInset() -> CGFloat{
-        return UIApplication
-            .shared
-            .connectedScenes
-            .flatMap { ($0 as? UIWindowScene)?.windows ?? [] }
-            .first { $0.isKeyWindow }?
-            .safeAreaInsets.top ?? .zero
-    }
-    
     //MARK: Body
     var body: some View {
         ZStack {
@@ -44,6 +35,10 @@ struct ContentView: View {
                             }
                         }
                         .padding(15)
+                        
+                        TitleView(title: "Brands")
+                        
+                        BrandGridView()
                         
                         FooterView()
                             .padding(.horizontal)
