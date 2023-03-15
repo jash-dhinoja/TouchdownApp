@@ -42,6 +42,7 @@
 		1548AACD29C1192500E9355E /* RatingSizesDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548AACC29C1192500E9355E /* RatingSizesDetailView.swift */; };
 		1548AACF29C11C3700E9355E /* QuantityFavDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548AACE29C11C3700E9355E /* QuantityFavDetailView.swift */; };
 		1548AAD129C11DDC00E9355E /* AddToCartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548AAD029C11DDC00E9355E /* AddToCartDetailView.swift */; };
+		1548AAD529C12CC600E9355E /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1548AAD429C12CC600E9355E /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +83,7 @@
 		1548AACC29C1192500E9355E /* RatingSizesDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingSizesDetailView.swift; sourceTree = "<group>"; };
 		1548AACE29C11C3700E9355E /* QuantityFavDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityFavDetailView.swift; sourceTree = "<group>"; };
 		1548AAD029C11DDC00E9355E /* AddToCartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartDetailView.swift; sourceTree = "<group>"; };
+		1548AAD429C12CC600E9355E /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +224,7 @@
 				1548AA9A29BFE7DD00E9355E /* Constants.swift */,
 				1548AAC229C0EA0300E9355E /* UtilFunctions.swift */,
 				1548AACA29C1175500E9355E /* CustomShape.swift */,
+				1548AAD429C12CC600E9355E /* Shop.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				1548AAA929C0BC6900E9355E /* FeaturedView.swift in Sources */,
 				1548AA7129BFE5A200E9355E /* ContentView.swift in Sources */,
 				1548AAB729C0D5DF00E9355E /* ProductItem.swift in Sources */,
+				1548AAD529C12CC600E9355E /* Shop.swift in Sources */,
 				1548AAA129BFFE4F00E9355E /* LogoView.swift in Sources */,
 				1548AA9D29BFE8A000E9355E /* FooterView.swift in Sources */,
 				1548AA9B29BFE7DD00E9355E /* Constants.swift in Sources */,
