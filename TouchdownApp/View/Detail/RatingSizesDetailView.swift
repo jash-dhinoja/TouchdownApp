@@ -9,6 +9,11 @@ import SwiftUI
 
 struct RatingSizesDetailView: View {
     
+    @EnvironmentObject var shop: Shop
+    
+    @State private var selectedRating = 0
+    @State private var selectedSize = "M"
+    
     let sizes: [String] = [ "XS", "X", "M", "L", "XL"]
     
     var body: some View {
@@ -23,11 +28,11 @@ struct RatingSizesDetailView: View {
                 HStack(alignment: .center,spacing: 3){
                     ForEach(1...5, id:\.self){ item in
                         Button(action: {
-                            
+                            selectedRating = item
                         }, label: {
-                            Image(systemName: "star.fill")
+                            Image(systemName: selectedRating < item ? "star" : "star.fill")
                                 .frame(width: 28,height: 28)
-                                .background(colorGray.cornerRadius(5))
+                                .foregroundColor(shop.selectedProduct?.mainColor ?? sampleProduct.mainColor)
                         })
                     }
                 }
@@ -42,14 +47,16 @@ struct RatingSizesDetailView: View {
                 HStack(alignment: .center,spacing: 5){
                     ForEach(sizes, id: \.self){ size in
                         Button(action: {
-                            
+                            selectedSize = size
                         }, label: {
                             Text(size)
                                 .font(.footnote)
                                 .fontWeight(.heavy)
-                                .foregroundColor(colorGray)
+                                .foregroundColor(selectedSize == size ? Color.white : colorGray)
                                 .frame(width: 28, height: 28, alignment: .center)
-                                .background(Color.white.cornerRadius(5))
+                                .background(
+                                    selectedSize == size ? (shop.selectedProduct?.mainColor ?? sampleProduct.mainColor).cornerRadius(5) : Color.white.cornerRadius(5)
+                                )
                                 .background(
                                     RoundedRectangle(cornerRadius: 5)
                                         .stroke(colorGray, lineWidth: 2)
@@ -67,5 +74,6 @@ struct RatingSizesDetailView_Previews: PreviewProvider {
         RatingSizesDetailView()
             .previewLayout(.sizeThatFits)
             .padding()
+            .environmentObject(Shop())
     }
 }

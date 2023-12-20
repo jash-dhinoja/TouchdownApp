@@ -18,9 +18,7 @@ struct ProductItem: View {
                     .padding()
                 
             }
-            .background(Color(red: product.red,
-                              green: product.green,
-                              blue: product.blue))
+            .background(product.mainColor)
             .cornerRadius(12)
             
             Text(product.name)

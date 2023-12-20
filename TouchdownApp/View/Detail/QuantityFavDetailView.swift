@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct QuantityFavDetailView: View {
-    @State private var itemCounter: Int = 0
+    @State private var itemCounter: Int = 1
+    @State private var isFavorite: Bool = false
     var body: some View {
         HStack(alignment: .center,spacing: 6){
             Button(action: {
@@ -33,9 +34,10 @@ struct QuantityFavDetailView: View {
             Spacer()
             Button(action: {
                 feedback.impactOccurred()
+                isFavorite.toggle()
             }, label: {
                 Image(systemName: "heart.circle")
-                    .foregroundColor(.pink)
+                    .foregroundColor(isFavorite ? .pink : .gray)
             })
         }
         .font(.system(.title,design: .rounded))

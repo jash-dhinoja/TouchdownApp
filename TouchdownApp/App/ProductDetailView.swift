@@ -51,12 +51,8 @@ struct ProductDetailView: View {
         }
         .zIndex(0)
         .ignoresSafeArea(.all,edges: .all)
-        .background(
-            Color(red: shop.selectedProduct?.red ?? sampleProduct.red,
-                  green: shop.selectedProduct?.green ?? sampleProduct.green,
-                  blue: shop.selectedProduct?.blue ?? sampleProduct.blue)
-            .ignoresSafeArea(.all, edges: .all)
-        )
+        .background((shop.selectedProduct?.mainColor ?? sampleProduct.mainColor)
+            .ignoresSafeArea(.all, edges: .all))
     }
 }
 
