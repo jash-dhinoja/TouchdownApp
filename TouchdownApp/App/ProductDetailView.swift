@@ -14,7 +14,7 @@ struct ProductDetailView: View {
     var body: some View {
         VStack(alignment: .leading,spacing: 5){
             NavigationBarDetailView()
-                .padding(.horizontal)
+                .padding()
                 .padding(.top, getWindowTopSafeAreaInset())
             
             HeaderDetailView()
